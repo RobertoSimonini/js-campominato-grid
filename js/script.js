@@ -15,3 +15,14 @@
     #MILESTONE 4
     Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 */
+
+// Prendo gli elementi dal DOM 
+const btnPlay = document.getElementById('play');
+const grid = document.getElementById('grid');
+
+// Aggiungo l'even listener al bottone 
+btnPlay.addEventListener ('click', function(){
+    // Aggiungo la classe al grid così da creare il container per il campo minato
+    grid.classList.add('grid');
+
+});
