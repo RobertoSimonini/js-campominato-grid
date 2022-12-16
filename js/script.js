@@ -6,23 +6,37 @@
     Ogni cella ha un numero progressivo, da 1 a 100.
     Ci saranno quindi 10 caselle per ognuna delle 10 righe.
     Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-    #MILESTONE 1
+    ? MILESTONE 1
     Prepariamo l'HTML ed il CSS per ottenere il risultato grafico che vediamo nell'immagine allegata.
-    #MILESTONE 2
+    ? MILESTONE 2
     Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS. Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
-    #MILESTONE 3
+    ? MILESTONE 3
     In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
-    #MILESTONE 4
+    ? MILESTONE 4
     Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 */
 
 // Prendo gli elementi dal DOM 
 const btnPlay = document.getElementById('play');
 const grid = document.getElementById('grid');
+// Aggiungo le impostazioni affinchè possa creare la griglia 
+const totalCells = 100;
+
+// # Creo una funzione che mi permetta di creare le celle all'interno della grid
+function createCell () {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    grid.appendChild(cell);
+}
 
 // Aggiungo l'even listener al bottone 
 btnPlay.addEventListener ('click', function(){
     // Aggiungo la classe al grid così da creare il container per il campo minato
     grid.classList.add('grid');
+
+    for (let i = 1; i <= totalCells; i++) {
+        // Aggiungo la funzioen che crei le celle e le appena nella griglia 
+        createCell ();
+    }
 
 });
