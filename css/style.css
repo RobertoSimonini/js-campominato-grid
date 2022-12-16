@@ -1,0 +1,32 @@
+
+/* Generics  */
+body {
+    background-color: #7FFFD4;
+    font-family: sans-serif;
+}
+
+/* Header  */
+
+header nav {
+    height: 100px;
+    margin-bottom: 150px;
+    padding: 0 50px;
+}
+
+#title {
+    font-size: 35px;
+}
+
+#play {
+    padding: 10px 25px;
+    font-size: 15px;
+}
+
+
+/* Grid  */
+#grid {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border: 2px dashed blue;
+}
