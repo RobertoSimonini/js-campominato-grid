@@ -41,7 +41,7 @@ btnPlay.addEventListener ('click', function(){
         const cell = createCell (i);
 
         cell.addEventListener ('click', function(){
-            cell.classList.add('bg-sky-blue');
+            cell.classList.toggle('bg-sky-blue');
             console.log(i);
         });
     };
