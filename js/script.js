@@ -39,8 +39,12 @@ btnPlay.addEventListener ('click', function(){
     for (let i = 1; i <= totalCells; i++) {
         // Aggiungo la funzione che crei le celle e le appena nella griglia 
         const cell = createCell (i);
+
+        cell.addEventListener ('click', function(){
+            cell.classList.add('bg-sky-blue');
+            console.log(i);
+        });
     };
 
-
-
+    
 });
