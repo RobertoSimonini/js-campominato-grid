@@ -23,10 +23,12 @@ const grid = document.getElementById('grid');
 const totalCells = 100;
 
 // # Creo una funzione che mi permetta di creare le celle all'interno della grid
-function createCell () {
+function createCell (content) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
+    cell.append(content)
     grid.appendChild(cell);
+    return cell;
 }
 
 // Aggiungo l'even listener al bottone 
@@ -35,8 +37,10 @@ btnPlay.addEventListener ('click', function(){
     grid.classList.add('grid');
 
     for (let i = 1; i <= totalCells; i++) {
-        // Aggiungo la funzioen che crei le celle e le appena nella griglia 
-        createCell ();
-    }
+        // Aggiungo la funzione che crei le celle e le appena nella griglia 
+        const cell = createCell (i);
+    };
+
+
 
 });

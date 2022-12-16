@@ -9,7 +9,7 @@ body {
 
 header nav {
     height: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 75px;
     padding: 0 50px;
 }
 
@@ -25,9 +25,9 @@ header nav {
 
 /* Grid  */
 .grid {
-    width: 600px;
-    height: 600px;
-    border: 1px solid black;
+    width: 700px;
+    height: 700px;
+    border: 0.5px solid black;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -37,4 +37,9 @@ header nav {
     height: 10%;
     width: 10%;
     border: 1px solid black;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
