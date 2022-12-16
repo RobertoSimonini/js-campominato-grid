@@ -19,11 +19,14 @@ header nav {
 
 #play {
     padding: 10px 25px;
-    font-size: 15px;
+}
+
+#userChoice {
+    padding: 13px;
 }
 
 
-/* Grid  */
+/* Grid and cells  */
 .grid {
     width: 700px;
     height: 700px;
@@ -33,9 +36,7 @@ header nav {
     flex-wrap: wrap;
 }
 
-.cell {
-    height: 10%;
-    width: 10%;
+.grid > * {
     border: 1px solid black;
     font-size: 15px;
     font-weight: bold;
@@ -43,6 +44,21 @@ header nav {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.cell {
+    height: 10%;
+    width: 10%;
+}
+
+.normal-cell {
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.hard-cell {
+    height: calc(100% / 7);
+    width: calc(100% / 7);
 }
 
 .bg-sky-blue {

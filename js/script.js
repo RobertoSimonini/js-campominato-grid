@@ -19,13 +19,20 @@
 // Prendo gli elementi dal DOM 
 const btnPlay = document.getElementById('play');
 const grid = document.getElementById('grid');
+const select = document.getElementById('userChoice')
 // Aggiungo le impostazioni affinchè possa creare la griglia 
-const totalCells = 100;
+let totalCells = 100;
 
 // # Creo una funzione che mi permetta di creare le celle all'interno della grid
 function createCell (content) {
     const cell = document.createElement('div');
-    cell.classList.add('cell');
+    if (userChoice === 'normal') {
+        cell.classList.add('normal-cell');
+    } else if (userChoice === 'hard') {
+        cell.classList.add('hard-cell');
+    } else {
+        cell.classList.add('cell');
+    }
     cell.append(content)
     grid.appendChild(cell);
     return cell;
@@ -35,16 +42,25 @@ function createCell (content) {
 btnPlay.addEventListener ('click', function(){
     // Aggiungo la classe al grid così da creare il container per il campo minato
     grid.classList.add('grid');
+    
+    // Prendo il value della select 
+    userChoice = select.value;
+    
+    // Creo la condizione per cambiare la modalità di gioco
+    if (userChoice === 'normal') {
+        totalCells = 81;
+    } else if (userChoice === 'hard') {
+        totalCells = 49;
+    }
 
     for (let i = 1; i <= totalCells; i++) {
         // Aggiungo la funzione che crei le celle e le appena nella griglia 
         const cell = createCell (i);
-
+        
         cell.addEventListener ('click', function(){
             cell.classList.toggle('bg-sky-blue');
             console.log(i);
         });
     };
-
-    
 });
+

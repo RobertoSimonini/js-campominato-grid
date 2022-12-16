@@ -16,16 +16,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <!-- Intestazione  -->
     <header>
-        <nav class="navbar bg-light">
+        <nav class="navbar bg-light justify-content-space-between">
             <div class="container-fluid">
               <h1 id="title" class="navbar-brand">Campo Minato</h1>
-                <button id="play" class="btn btn-outline-success">Play</button>
+              <div id="nav-right">
+                  <button id="play" class="btn btn-outline-success">Play</button>
+                  <select aria-label="Default select example" class="btn btn-outline-primary" id="userChoice">
+                      <option selected>Change the difficult</option>
+                      <option value="normal">Normal</option>
+                      <option value="hard">Hard</option>
+                    </select>
+              </div>
             </div>
           </nav>
     </header>
-
+    <!-- Aggiungo la griglia che rimperirò successivamente con Javascript  -->
     <div class="container">
         <div id="grid">
     
