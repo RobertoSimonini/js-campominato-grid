@@ -25,8 +25,15 @@ header nav {
 
 /* Grid  */
 #grid {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
-    border: 2px dashed blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    height: 10%;
+    width: 10%;
+    border: 1px solid blue;
 }
